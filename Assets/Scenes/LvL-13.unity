@@ -1537,6 +1537,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1557862220}
+  materialBounciness: 1
+  bounceCombine: 2
+  bounceDamping: 1
+  maxBounceSpeed: 1
+  removeBounciness: 1
+  autoZeroGroundMaterials: 1
+  groundTag: Ground
+  minLinearDrag: 0.2
+  minAngularDrag: 0.05
 --- !u!1 &842425235
 GameObject:
   m_ObjectHideFlags: 0

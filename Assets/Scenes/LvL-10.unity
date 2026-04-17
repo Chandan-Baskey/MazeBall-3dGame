@@ -1345,6 +1345,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1557862220}
+  materialBounciness: 1
+  bounceCombine: 2
+  bounceDamping: 1
+  maxBounceSpeed: 1
+  removeBounciness: 1
+  autoZeroGroundMaterials: 1
+  groundTag: Ground
+  minLinearDrag: 0.2
+  minAngularDrag: 0.05
 --- !u!1 &1073372520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2296,7 +2305,7 @@ PrefabInstance:
     - target: {fileID: 1500975402211577925, guid: f57e7b9b5180a2e4ba34ede149e73000,
         type: 3}
       propertyPath: timeLeft
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1500975402211577925, guid: f57e7b9b5180a2e4ba34ede149e73000,
         type: 3}
