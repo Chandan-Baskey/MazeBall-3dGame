@@ -463,8 +463,8 @@ All packages are managed via the **Unity Package Manager** and are included in t
 ## 👤 Author
 
 **Your Name**  
-📧 your@email.com  
-🌐 [https://github.com/yourusername](https://github.com/Chandan-Baskey)
+📧 im.chandanbaskey@email.com  
+🌐 [https://github.com/chandan-Baskey](https://github.com/Chandan-Baskey)
 
 ---
 
