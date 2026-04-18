@@ -17,6 +17,10 @@
 | START · LEVELS · QUIT | 15 Levels Grid | 3D Isometric Maze | WIN GAME popup | GAME OVER popup |
 
 ---
+## Main Menu
+
+![image alt](https://github.com/Chandan-Baskey/Maze-Ball/blob/9e6c870df03ecf8766b614f6a0dc4937da6b6b64/main-menu.jpg)
+
 
 ## 📖 Table of Contents
 
@@ -43,10 +47,6 @@
 The game uses Unity's **Universal Render Pipeline (URP)** for polished visuals with post-processing effects, dynamic lighting, and smooth physics.
 
 ---
-
-## Game Main Menu
-
-![image alt](https://github.com/Chandan-Baskey/Maze-Ball/blob/9e6c870df03ecf8766b614f6a0dc4937da6b6b64/main-menu.jpg)
 
 
 ## ✨ Features
