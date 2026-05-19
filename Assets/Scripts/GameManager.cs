@@ -22,14 +22,19 @@ public class GameManager : MonoBehaviour
     public int currentScene;
     public int nextScene;
 
-    
-    // Start is called before the first frame update
+    [Header("Sound Effects")]
+    public AudioClip winSound;
+    public AudioClip gameOverSound;
+    private AudioSource audioSource;
+
     void Start()
     {
-
+        // Get or add an AudioSource on this GameObject
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timeLeft >= 0 && !win)
@@ -37,7 +42,7 @@ public class GameManager : MonoBehaviour
             timeLeft -= Time.deltaTime;
             timerText.text = timeLeft.ToString("F1");
         }
-        if (timeLeft <= 0 && !win)
+        if (timeLeft <= 0 && !win && !gameOver)
         {
             GameOver();
         }
@@ -45,11 +50,14 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
-        
         win = true;
         winText.SetActive(true);
         player.enabled = false;
         ball.SetActive(false);
+
+        // Play win sound when win text becomes active
+        if (winSound != null)
+            audioSource.PlayOneShot(winSound);
     }
 
     public void GameOver()
@@ -58,13 +66,16 @@ public class GameManager : MonoBehaviour
         gameOverText.SetActive(true);
         player.enabled = false;
         ball.SetActive(false);
+
+        // Play game over sound when game over text becomes active
+        if (gameOverSound != null)
+            audioSource.PlayOneShot(gameOverSound);
     }
 
     public void TimeText()
     {
         timeText.SetActive(false);
     }
-
 
     public void RestartGame()
     {
