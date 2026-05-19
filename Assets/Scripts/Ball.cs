@@ -1,10 +1,15 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
 public class Ball : MonoBehaviour
 {
     public GameManager gm;
+
+    [Header("Sound Effects")]
+    public AudioClip collideSound;
+    public LayerMask wallLayer; // ✅ Assign "Wall" layer in Inspector
+    private AudioSource audioSource;
 
     [Header("Bounce Control")]
     [Range(0f, 1f)]
@@ -104,9 +109,16 @@ public class Ball : MonoBehaviour
             }
             catch (UnityException)
             {
-                // Tag not defined or other issue � ignore to avoid runtime error
+                // Tag not defined or other issue — ignore to avoid runtime error
             }
         }
+    }
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -123,11 +135,18 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
         if (collision.gameObject.CompareTag("WinGround"))
         {
             if (gm != null) gm.WinGame();
             return;
         }
+        if (((1 << collision.gameObject.layer) & wallLayer) != 0)
+        {
+            if (collideSound != null && audioSource != null)
+                audioSource.PlayOneShot(collideSound);
+        }
+
 
         if (rb == null) return;
 
@@ -166,6 +185,7 @@ public class Ball : MonoBehaviour
         }
 
         rb.velocity = vel;
+
     }
 
     private void OnCollisionStay(Collision collision)
