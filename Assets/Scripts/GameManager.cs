@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     public int currentScene;
     public int nextScene;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,7 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
+        
         win = true;
         winText.SetActive(true);
         player.enabled = false;
