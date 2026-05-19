@@ -820,6 +820,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1557862220}
+  collideSound: {fileID: 8300000, guid: 4a4c9bd26a76bd648b7950c69f47508f, type: 3}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   materialBounciness: 1
   bounceCombine: 2
   bounceDamping: 1
