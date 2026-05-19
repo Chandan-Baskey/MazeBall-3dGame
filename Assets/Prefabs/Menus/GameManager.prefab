@@ -50,5 +50,8 @@ MonoBehaviour:
   ball: {fileID: 0}
   player: {fileID: 0}
   timerText: {fileID: 0}
+  timeText: {fileID: 0}
   currentScene: 2
   nextScene: 3
+  winSound: {fileID: 8300000, guid: 3438bb77282b37142ae35ccf25b14482, type: 3}
+  gameOverSound: {fileID: 8300000, guid: 7288e981b7572f3428167a97d10b9eae, type: 3}
