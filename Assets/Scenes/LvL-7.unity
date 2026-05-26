@@ -1450,6 +1450,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1557862220}
+  collideSound: {fileID: 0}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 8
   materialBounciness: 1
   bounceCombine: 2
   bounceDamping: 1
@@ -2287,6 +2291,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 70b5af82b1e64c145be36244e6cc2b63, type: 2}
+    - target: {fileID: 3125894625522962766, guid: 869390d7521a44a449f4d4e14aab3117,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125894625522962766, guid: 869390d7521a44a449f4d4e14aab3117,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 3741158201850024531, guid: 869390d7521a44a449f4d4e14aab3117,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2302,15 +2316,45 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 70b5af82b1e64c145be36244e6cc2b63, type: 2}
+    - target: {fileID: 5828173234702604584, guid: 869390d7521a44a449f4d4e14aab3117,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828173234702604584, guid: 869390d7521a44a449f4d4e14aab3117,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5879951794135563675, guid: 869390d7521a44a449f4d4e14aab3117,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.172
       objectReference: {fileID: 0}
+    - target: {fileID: 6857332910540359490, guid: 869390d7521a44a449f4d4e14aab3117,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857332910540359490, guid: 869390d7521a44a449f4d4e14aab3117,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 7864361521552243252, guid: 869390d7521a44a449f4d4e14aab3117,
         type: 3}
       propertyPath: m_Name
       value: Ground 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260603306570164723, guid: 869390d7521a44a449f4d4e14aab3117,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260603306570164723, guid: 869390d7521a44a449f4d4e14aab3117,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8390517567290434283, guid: 869390d7521a44a449f4d4e14aab3117,
         type: 3}
