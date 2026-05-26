@@ -117,8 +117,8 @@ public class Ball : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-            audioSource = gameObject.AddComponent<AudioSource>();
+        //if (audioSource == null)
+        //    audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -141,11 +141,15 @@ public class Ball : MonoBehaviour
             if (gm != null) gm.WinGame();
             return;
         }
-        if (((1 << collision.gameObject.layer) & wallLayer) != 0)
+        //if (((1 << collision.gameObject.layer) & wallLayer) != 0)
+        //{
+        //    if (collideSound != null && audioSource != null)
+        //        audioSource.PlayOneShot(collideSound);
+        //}
+        if(collision.collider.CompareTag("Wall"))
         {
-            if (collideSound != null && audioSource != null)
-                audioSource.PlayOneShot(collideSound);
-        }
+            audioSource.Play(); 
+        }  
 
 
         if (rb == null) return;
