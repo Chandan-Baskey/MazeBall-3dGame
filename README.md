@@ -19,7 +19,7 @@
 ---
 ## Game Views
 
-![image alt](https://github.com/Chandan-Baskey/Maze-Ball/blob/d78fd3be2c4b42164ea8757eb502daee167f8de0/GameView.png)
+![image alt](https://github.com/Chandan-Baskey/MazeBall-3dGame/blob/2315decc48fc4434157af3d70e017cf197ea8f68/GameView.jpg)
 
 
 ## 📖 Table of Contents
